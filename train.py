@@ -10,12 +10,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
-from sklearn.metrics import (
-f1_score,
-accuracy_score,
-classification_report,
-confusion_matrix
-)
+from sklearn.metrics import (f1_score,accuracy_score,classification_report,confusion_matrix)
 #STEP 2:Load dataset
 data=load_breast_cancer()
 X=pd.DataFrame(
