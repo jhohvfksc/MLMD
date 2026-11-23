@@ -9,7 +9,7 @@ MODEL_PATH="best_model.joblib"
 #FIXTURE 1:Load the trained model
  @pytest.fixture
  def model():
-  assert os.path.exists(MODEL_PATH), "Model file not found!"
+  assert os.path.exists(MODEL_PATH), "Modelfile not found!"
   return joblib.load(MODEL_PATH)
 #FIXTURE 2:Prepare sample input data
  @pytest.fixture
@@ -17,8 +17,7 @@ MODEL_PATH="best_model.joblib"
   data=load_breast_cancer()
   X=pd.DataFrame(
   data.data,
-  columns=data.feature_names
-  )
+  columns=data.feature_names)
   return X.iloc[:5] 
 #TEST 1:Check whether model loads successfully
  def test_model_loads(model):
